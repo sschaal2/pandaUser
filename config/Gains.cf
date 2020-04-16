@@ -1,0 +1,17 @@
+/* this file contains gains and max control for each DOF
+   Note: the file is parsed according to keywords, after the keyword,
+         the values need to come in the correct sequence */
+
+/* format: keyword, gain_th, gain_thd, gain_int, max_control  */
+
+//  gains tuned with simple step functions
+J1   150.00   20.00 0.01  87.00
+J2   150.00   20.00 0.01  87.00
+J3   120.00   10.00 0.01  87.00
+J4   80.00    5.00  0.01  87.00
+J5   40.00    2.00  0.01  12.00
+J6   30.00    1.00  0.01  12.00
+J7   30.00    1.00  0.01  12.00
+
+
+

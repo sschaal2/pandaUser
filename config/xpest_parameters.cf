@@ -1,0 +1,8 @@
+// filter cutoff - viscous - coulomb- spring
+J1 100 1 0 0
+J2 100 1 0 0
+J3 100 1 0 0
+J4 100 1 0 0
+J5 100 1 0 0
+J6 100 1 0 0
+J7 100 1 0 0

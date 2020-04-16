@@ -1,0 +1,16 @@
+/* this file contains a list of file names that are used for the configuration files.
+   Note: all file names are relative to the "config/" directory */
+
+/* format: keyword, configuration file name */
+
+
+Gains			Gains.cf
+LinkParameters		LinkParameters.cf
+Objects			Objects.cf
+SensorCalibration	SensorCalibration.cf
+SensorFilter		SensorFilter.cf
+SensorOffset		SensorOffset.cf
+WhichDOFs		WhichDOFs.cf
+StereoParameters	StereoParameters.cf
+ParameterPool		ParameterPool.cf
+Contacts		Contacts.cf

@@ -1,0 +1,66 @@
+/* this file contains general SL specific and user specific parameter that can be parsed
+   with approprite SL APIs. The syntax is:
+
+   keyword	   val1 val2 val3 ...
+
+   All elements must be on the same line.
+
+   Note that C-style comments are permitted and will be stripped. ':',';','=' are stripped, too.
+
+*/
+
+// window geometry specifications
+
+simulation_servo_geometry	90x8-60+0
+panda_servo_geometry		90x8-60+0
+openGL_servo_geometry		90x8-60+160
+motor_servo_geometry		90x12-60+297
+task_servo_geometry		90x40-60+486
+
+
+
+main_window_geometry		30%x50%+0+20
+main_window_camera_pos		0.7 2.0 1.
+
+
+// floor checkerboard
+
+checkerboard_width              0.5
+checkerboard_height             0.5
+checkerboard_offset		0.01
+
+// contact specific display variables
+
+contact_point_radius	   	0.005
+contact_force_scale             0.1
+
+
+// oscilloscope settings
+
+osc_enabled			1
+n_osc_plots			4
+osc_periods_ad			2
+osc_time_window_vars		5.0
+osc_vars_task_file		task_default.osc
+osc_vars_motor_file		motor_default.osc
+osc_vars_vision_file		vision_default.osc
+osc_window_geometry		600x700+35%+20
+
+
+// base setting
+
+init_base_pos			0.0	0.0	0.0
+init_base_quat			1.0	0.0	0.0	0.0
+
+
+// dynamics settings
+
+use_comp_inertia_fordyn		0
+
+// Panda IP address
+
+panda_ip			20.18.9.5
+
+// goto task speed
+
+goto_speed			.3

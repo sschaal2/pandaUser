@@ -1,0 +1,59 @@
+/* This file specifies the contacts that should be checked. All contacts are lines between two 
+   links of the robot. Each line in the file specifies one contact line with the following specs:
+
+   start_link end_link active n_check start_cond  end_cond
+
+   start_link: name of the start link of the line
+   end_link  : name of the end link of the line
+   active    : 0 or 1 for non-active or active
+   n_checks  : number of check points between start and and point
+   start_cond: 
+   end_cond  : can be "full", "half", or "orth". 
+
+               full: contact forces in all direction are permissible
+               half: contact forces in the half space including the line are permissible. The space
+                     is terminated by the plane perpendicular to the line which includes the start
+		     (or end) point
+               orth: contact forces orthogonal to the line are permitted
+
+   Note that C/C++-style comments are permitted and will be stripped. ':',';','=' are stripped, too.
+
+*/
+
+BASE		J2_LINK		1	5	half	orth
+J2_LINK 	J3_LINK		1	5	orth	orth
+J3_LINK		J4_LINK		1	5	orth	orth
+J4_LINK		J5_LINK		1	5	orth	orth
+J5_LINK		J7_LINK		1	5	orth	orth
+J7_LINK		FLANGE		1	2	orth	half
+
+
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005    0.01   0.0000   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005   -0.01   0.0000   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005    0.01   0.0000   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005   -0.01   0.0000   0.0000 0.0000  -1.0000
+
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005    0.01  -0.0100   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005   -0.01  -0.0100   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005    0.01  -0.0100   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005   -0.01  -0.0100   0.0000 0.0000  -1.0000
+
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005    0.01  -0.0200   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005   -0.01  -0.0200   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005    0.01  -0.0200   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005   -0.01  -0.0200   0.0000 0.0000  -1.0000
+
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005    0.01  -0.0400   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005   -0.01  -0.0400   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005    0.01  -0.0400   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005   -0.01  -0.0400   0.0000 0.0000  -1.0000
+
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005    0.01  -0.0600   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005   -0.01  -0.0600   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005    0.01  -0.0600   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005   -0.01  -0.0600   0.0000 0.0000  -1.0000
+
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005    0.015  -0.0600   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005   -0.015  -0.0600   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used -0.005    0.015  -0.0600   0.0000 0.0000  -1.0000
+FLANGE          POINT_CONTACT   1   1  half  not_used  0.005   -0.015  -0.0600   0.0000 0.0000  -1.0000

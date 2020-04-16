@@ -1,0 +1,11 @@
+#only run the following on interactive shells
+if ($?prompt) then
+
+    # a list of user defined aliases
+    setenv DISPLAY :0.0
+    alias make make -s
+    unsetenv PRINTER
+
+endif
+
+

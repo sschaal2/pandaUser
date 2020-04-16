@@ -1,0 +1,98 @@
+/* this file contains a list of object specifications that can be added to the
+   graphics scence. Each object must contain blank or tab delimited parameters in
+   the following sequence:
+
+	name  (max 20 characters)
+        object type (e.g., CUBE=1, SPHERE=2, see SL_openGL.h)
+        rgb color values (3 values)
+        pos_x pos_y pos_z
+        rot_x rot_y_rot_z
+        scale_x scale_y scale_z
+        contact_model  (e.g., DAMPED_SPRING_FRICTION=1)
+        appropriate number of object parameters (N_OBJ_PARMS: see SL_openGL.h)
+        appropriate number of contact parameters (N_OBJ_PARMS: see SL_openGL.h)
+
+*/        
+
+
+floor 1 		/* name and ID of object type */
+1.0 0.0 0.0          	/* rgb */
+0.0 0.0 -1.65  		/* pos */
+0.0 0.0 0.0  		/* orient */
+40.0 40.0 1.0  		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 50 1000 50 0.8 0.8	/* contact parameters */
+
+table 1 		/* name and ID of object type */
+0.0 0.5 0.0          	/* rgb */
+0.0 0.0 -.05  		/* pos */
+0.0 0.0 0.0  		/* orient */
+2.0 2.0 .10  		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 50 10 50 0.8 0.8	/* contact parameters */
+
+// just a block to simulate the bottom of insertion for powerplug
+bottom 1 		/* name and ID of object type */
+0.5 0.5 0.5          	/* rgb */
+0.562 0.0 0.0  		/* pos */
+0.0 0.0 0.0  		/* orient */
+0.2 0.5 .114  		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 50 10 50 0.8 0.8	/* contact parameters */
+
+
+/* QFSP slot 
+qfsp_wall_1 1 		/* name and ID of object type */
+0.5 0.5 0.5          	/* rgb */
+0.618 0.0 0.02  	/* pos */
+0.0 0.0 0.0  		/* orient */
+0.02 0.2 0.1 		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 35 10 50 0.8 0.8	/* contact parameters */
+
+qfsp_wall_2 1 		/* name and ID of object type */
+0.5 0.5 0.5          	/* rgb */
+0.588 0.0 0.02  	/* pos */
+0.0 0.0 0.0  		/* orient */
+0.02 0.2 0.1 		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 35 10 50 0.8 0.8	/* contact parameters */
+
+qfsp_slot_middle 1 	/* name and ID of object type */
+0.5 0.5 0.5          	/* rgb */
+0.603 0.0 0.02  	/* pos */
+0.0 0.0 0.0  		/* orient */
+0.02 0.014 0.1 		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 35 10 50 0.8 0.8	/* contact parameters */
+
+qfsp_slot_side_1 1 	/* name and ID of object type */
+0.5 0.5 0.5          	/* rgb */
+0.603 0.037 0.02	/* pos */
+0.0 0.0 0.0  		/* orient */
+0.02 0.02 0.1 		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 35 10 50 0.8 0.8	/* contact parameters */
+
+qfsp_slot_side_2 1 	/* name and ID of object type */
+0.5 0.5 0.5          	/* rgb */
+0.603 -0.037 0.02	/* pos */
+0.0 0.0 0.0  		/* orient */
+0.02 0.02 0.1 		/* scale */
+1  			/* contact model */
+10         		/* object parameters */
+1000 35 10 50 0.8 0.8	/* contact parameters */
+*/
+
+/*
+position of first slot in gripper coordinates
+0.603 0.017 0.075
+
+*/

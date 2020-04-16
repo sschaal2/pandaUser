@@ -1,0 +1,14 @@
+/* this file contains gains and max control for each DOF
+   Note: the file is parsed according to keywords, after the keyword,
+         the values need to come in the correct sequence */
+
+/* format: keyword, gain_th, gain_thd, gain_int, max_control  */
+
+//  gains from real robot, but more damping
+J1   150.00   20.00 0.01  87.00
+J2   150.00   20.00 0.01  87.00
+J3   80.00    10.00 0.01  87.00
+J4   40.00    5.00  0.01  87.00
+J5   20.00    1.00  0.01  12.00
+J6   20.00    1.00  0.01  12.00
+J7   20.00    0.50  0.01  12.00
