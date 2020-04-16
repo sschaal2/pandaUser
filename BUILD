@@ -13,7 +13,7 @@ exports_files(["LICENSE"])
 NAME = "panda"
 
 # the root directory of this robot user implementation
-ROBOT_DIR = "tmp/pandaUser/"
+ROBOT_DIR = "pandaUser/"
 
 # the configs are to accommodate the SL cmake out-of-source naming of build directories on
 # different operating systems. The definition of MACHTYPE is passed as --define in bazel build command.
