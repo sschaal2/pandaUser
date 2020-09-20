@@ -1,9 +1,12 @@
 # Every SL directory has a symbolic link to config/bazel to access the config files as local path.
-# While not pretty, this allows BUILD files to be independt of the SL_ROOT workspace path, and only
+# While not pretty, this allows BUILD files to be independent of the SL_ROOT workspace path, and only
 # SL.bzl needs to be adjusted
-load(":bazel/SL.bzl", "SL_ROOT", "SL_ROOT_WS", "SL_VISIBILITY")
+load(":bazel/SL.bzl", "FEATURES", "SL_ROOT", "SL_VISIBILITY")
 
-package(default_visibility = SL_VISIBILITY)
+package(
+    default_visibility = SL_VISIBILITY,
+    features = FEATURES,
+)
 
 licenses(["notice"])
 
@@ -12,8 +15,8 @@ exports_files(["LICENSE"])
 # the name of this robot: various rules use the NAME such that BUILD files are easy to adapt to another robot
 NAME = "panda"
 
-# the root directory of this robot user implementation
-ROBOT_DIR = "pandaUser/"
+# the root directory of this robot's user implementation -- needs to be changed if in different path
+ROBOT_DIR = "third_party/SL/pandaUser/"
 
 # the configs are to accommodate the SL cmake out-of-source naming of build directories on
 # different operating systems. The definition of MACHTYPE is passed as --define in bazel build command.
@@ -43,11 +46,11 @@ cc_binary(
         SL_ROOT + NAME + ":" + NAME,
         SL_ROOT + "SL:SLcommon",
         SL_ROOT + "utilities:utility",
-        "//third_party/Xorg:X11headers",	
-        # "//third_party/Xorg:libX11",
-        # "//third_party/freeglut:headers",
-        # "//third_party/freeglut:native",
-        # "//third_party/glu:native",
+        #"//third_party/Xorg:X11headers",
+        "//third_party/Xorg:libX11",
+        "//third_party/freeglut:headers",
+        "//third_party/freeglut:native",
+        "//third_party/glu:native",
     ],
 )
 
@@ -104,10 +107,10 @@ cc_binary(
         SL_ROOT + NAME + ":" + NAME,
         SL_ROOT + NAME + ":" + NAME + "_openGL",
         SL_ROOT + "utilities:utility",
-        # "//third_party/Xorg:libX11",
-        # "//third_party/freeglut:headers",
-        # "//third_party/freeglut:native",
-        # "//third_party/glu:native",
+        "//third_party/Xorg:libX11",
+        "//third_party/freeglut:headers",
+        "//third_party/freeglut:native",
+        "//third_party/glu:native",
     ],
 )
 
@@ -200,7 +203,7 @@ genrule(
     cmd = select({
         ":x86_64mac": CMD_X86_64MAC_1 + "xopengl" + CMD_X86_64MAC_2,
         ":x86_64": CMD_X86_64_1 + "xopengl" + CMD_X86_64_2,
-        "//conditions:default": CMD_X86_64_1 + "xtask" + CMD_X86_64_2,
+        "//conditions:default": CMD_X86_64_1 + "xopengl" + CMD_X86_64_2,
     }),
     local = 1,
 )
