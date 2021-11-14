@@ -26,6 +26,12 @@ C_FZ_r
 C_MX_r
 C_MY_r
 C_MZ_r
+S_FX_r
+S_FY_r
+S_FZ_r
+S_MX_r
+S_MY_r
+S_MZ_r
 G_WIDTH_r
 G_MOTION_r
 J1_th

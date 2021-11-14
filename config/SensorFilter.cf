@@ -22,6 +22,14 @@
   C_MY 5
   C_MZ 5
 
+  S_FX 100
+  S_FY 100
+  S_FZ 100
+
+  S_MX 100
+  S_MY 100
+  S_MZ 100
+
   G_WIDTH 100
   G_MOTION 100
   

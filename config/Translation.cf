@@ -21,5 +21,12 @@ C_MX    1 0
 C_MY    1 0
 C_MZ    1 0
 
+S_FX    1 0
+S_FY    1 0
+S_FZ    1 0
+S_MX    1 0
+S_MY    1 0
+S_MZ    1 0
+
 G_WIDTH  1 0
 G_MOTION 1 0
